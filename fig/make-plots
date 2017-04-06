@@ -282,6 +282,8 @@ def thickness(p=None):
     dark_blue = plt.cm.Blues(0.7)
     dark_red = plt.cm.Reds(0.6)
 
+    plt.plot(X, Tmin, lw=0.2, color=offblack)
+    plt.plot(X, Tmax, lw=0.2, color=offblack)
     plt.fill_between(X, Tmin, Tmax, lw=0, color=grey, zorder=0,
                      label=r'$T_\mathrm{min} < T < T_\mathrm{max}$')
     plt.fill_between(X, gen_mean(TA, TB, -1), gen_mean(TA, TB, 1),
